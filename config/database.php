@@ -3,11 +3,11 @@
 // تنظیمات دیتابەیس
 // ==========================================
 
-define('DB_HOST', 'sql301.infinityfree.com');
-define('DB_USER', 'if0_41903352');
-define('DB_PASS', '9zxCb59k8D');
-define('DB_NAME', 'if0_41903352_course');
-define('DB_PORT', 3306);
+define('DB_HOST', getenv('MYSQLHOST')     ?: getenv('DB_HOST') ?: 'localhost');
+define('DB_USER', getenv('MYSQLUSER')     ?: getenv('DB_USER') ?: 'root');
+define('DB_PASS', getenv('MYSQLPASSWORD') ?: getenv('DB_PASS') ?: '');
+define('DB_NAME', getenv('MYSQLDATABASE') ?: getenv('DB_NAME') ?: 'railway');
+define('DB_PORT', getenv('MYSQLPORT')     ?: getenv('DB_PORT') ?: 3306);
 
 // تنظیمات سایت
 define('SITE_NAME', 'ڕاپرسی کۆرس');
